@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+/* body{
+    overflow: hidden;
+} */
+
+
+header nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header nav .logo{
+    position: relative;
+    max-width: 150px;
+    z-index: 200;
+}
+
+header nav .navigation{
+    position: relative;
+    display: flex;
+}
+
+header nav .navigation li{
+    list-style: none;
+}
+
+header nav .navigation a{
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+    font-size: 1rem;
+    transition: 0.4s ease-in-out;
+
+}
+
+header nav .navigation a:hover{
+    color: #161616;
+}
+
+
+
+
+
+
+/* ======================= main ============== */
+
+
+main section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #161616;
+}
+
+main section .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e51e2a;
+    clip-path: circle(70% at right -20px);
+}
+
+main section .content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main section .content .text{
+    position: relative;
+    max-width: 600px;
+    margin-right: 0px;
+
+}
+
+
+main section .content .text h1{
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+}
+
+
+main section .content .text p{
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+main section .content .text a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 16px;
+    background: #e51e2a;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 500;
+    z-index: 20;
+    transition: 0.4s ease-in-out;
+}
+
+main section .content .text a:hover{
+    color: #161616;
+}
+
+main section .sci{
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main section .sci li{
+    list-style: none;
+}
+
+main section .sci li a{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #222;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+}
+
+
+main section .sci li a:hover{
+    background: #e51e2a;
+    transform: translateY(-20px);
+}
+
+main section .sci a img{
+    filter: invert(1);
+    transform: scale(0.5);
+}
+
+
+/* ============ swiper slider */
+
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 180px;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .swiper-3d .swiper-slide-shadow-left,
+  .swiper-3d .swiper-slide-shadow-right
+   {
+    background-image: none;
+ }
+
+  .swiper-slide img {
+    position: absolute;
+    bottom: 0;
+    max-height: 100%;
+  }
+
+  main section .content .imgBox{
+      width: 700px;
+      display: flex;
+      justify-content: flex-end;
+  }
+
+  main section .content .imgBox img{
+      max-width: 150px;
+  }
+
+
+  @media screen and (max-width: 1200px){
+    
+    main section .content {
+        flex-direction: column;
+        top: 120px;
+    }
+
+    main section .content .text,
+    main section .content .imgBox
+     {
+        max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+      header nav{
+          padding: 40px;
+      }
+
+      header nav .navigation{
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          background: #e51e2a;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          top: -100%;
+          left: 0;
+          transition: 0.4s;
+      }
+
+      header nav .navigation.active{
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #e51e2a;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          z-index: 20;
+      }
+
+      header nav .navigation a {
+        margin-left: 0;
+        font-size: 1.5rem;
+        margin: 10px 0;
+        font-weight: 300;
+    }
+
+      .toggle{
+          position: relative;
+          width: 30px;
+          height: 30px;
+          background: url(/img/menu.png);
+          background-size: 30px;
+          background-position: center;
+          background-repeat: no-repeat;
+          cursor: pointer;
+          z-index: 1000;
+          transition: 0.3s;
+      }
+
+      .toggle:checked{
+          transform: rotate(10deg);
+      }
+
+      .toggle.active{
+        position: fixed;
+        right: 40px;
+        background: url(/img/close.png);
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      main section{
+        padding: 150px 40px;
+      } 
+
+      main section .sci {
+          left: 40px;
+      }
+
+      main section .content {
+        flex-direction: column;
+        top: 40px;
+    }
+
+    main section .content .text,
+    main section .content .imgBox
+     {
+        max-width: 100%;
+    }
+  }
+  @media screen and (max-width: 486px){
+    header nav{
+        padding: 20px;
+    }
+    main section .content .text{
+        margin-right: 10px;
+    
+    }
+    main section .content .text p{
+        width: 100%;
+        margin: 0;
+    }
+    main section .content .text h1{  
+        font-size: 2rem;
+    }
+  }
+  

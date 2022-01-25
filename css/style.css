@@ -31,6 +31,7 @@ main.dark{
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
     
 }
 
@@ -419,7 +420,7 @@ canvas {
 }
 
 .about .container .row .skills h3{
-    color: var(--color5);
+    color: var(--color4);
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -433,7 +434,7 @@ canvas {
     font-size: 1.1rem;
     font-weight: 600;
     text-transform: capitalize;
-    color: var(--color5);
+    color: var(--color4);
 }
 
 .about .container .row .skills .skill .percent{
@@ -449,7 +450,7 @@ canvas {
    position: absolute;
    right: 0;
    top: -40px;
-   color: var(--color5);
+   color: var(--color4);
    line-height: 2.4rem;
 
 }
@@ -844,10 +845,51 @@ canvas {
 @media screen and (max-width: 1199px) {
     header{
         left: -270px;
+        transition: 0.5s;
+        
     }
+
+    header.active{
+        left: 0px;
+        z-index: 999;
+    }
+
     main{
         padding-left: 0;
         
+    }
+
+    header nav .nav-toggle{
+        position: fixed;
+        left: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        transition: 0.5s;
+    }
+
+    header nav .nav-toggle.active{
+        left: 280px;
+    }
+
+
+    header nav .nav-toggle span::before{
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: 0;
+        width: 18px;
+        height: 2px;
+        background: var(--skins-color1);
+    }
+    header nav .nav-toggle span::after{
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 18px;
+        height: 2px;
+        background: var(--skins-color1);
     }
 }
 
@@ -857,6 +899,7 @@ canvas {
 .services .container .row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     /* flex-direction: column; */
 }
@@ -896,6 +939,20 @@ canvas {
         display: flex;
         flex-wrap: wrap;
     
+    }
+
+    .services .container .row .title p {
+        font-size: 1rem;
+        font-weight: 400;
+        
+    }
+
+    .about .container .row .row-container .text p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .about .container .row .row-container .text h3 {
+        font-size: 1.2rem;
     }
 
     main .home .container .row{

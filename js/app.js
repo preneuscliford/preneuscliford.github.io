@@ -1,3 +1,10 @@
+const nav = document.querySelector( "nav" );
+const acc = document.querySelector( ".acc" );
+const app = document.querySelector( ".app" );
+const ser = document.querySelector( ".ser" );
+const ptf = document.querySelector( ".pft" );
+const cont = document.querySelector( ".cont" );
+const btn = document.querySelector( "btn" );
 
 
 
@@ -8,13 +15,64 @@
 
 
 
+app.addEventListener( "click", () => {
+  app.classList.add("active")
+  acc.classList.remove( "active" )
+  ser.classList.remove( "active" )
+  ptf.classList.remove( "active" )
+  cont.classList.remove( "active" )
+
+ 
+  
+
+})
+acc.addEventListener( "click", () => {
+  acc.classList.add("active")
+  app.classList.remove( "active" )
+  ser.classList.remove( "active" )
+  ptf.classList.remove( "active" )
+  cont.classList.remove( "active" )
+
+  
+  
+
+})
+ser.addEventListener( "click", () => {
+  ser.classList.add("active")
+  acc.classList.remove( "active" )
+  app.classList.remove( "active" )
+  ptf.classList.remove( "active" )
+  cont.classList.remove( "active" )
+  
+
+  
+
+})
+ptf.addEventListener( "click", () => {
+  ptf.classList.add("active")
+  acc.classList.remove( "active" )
+  ser.classList.remove( "active" )
+  app.classList.remove( "active" )
+  cont.classList.remove( "active" )
+  
+
+
+})
+cont.addEventListener( "click", () => {
+  cont.classList.add("active")
+  acc.classList.remove( "active" )
+  ser.classList.remove( "active" )
+  ptf.classList.remove( "active" )
+  app.classList.remove( "active" )
+  
+  
+
+})
 
 
 
 
-
-
-
+  
 
 
 

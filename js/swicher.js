@@ -6,7 +6,12 @@ const moon = document.querySelector( ".moon" );
 const header  = document.querySelector( "header " );
 const main = document.querySelector( "main" );
 const swichIcon = document.querySelector(".style-swich-icon")
-const alternatStyle = document.querySelectorAll(".alternate-style")
+const alternatStyle = document.querySelectorAll( ".alternate-style" )
+const  nav_toggle = document.querySelector( ".nav-toggle" );
+
+const allLink = document.querySelectorAll( ".link" );
+
+console.log(allLink);
 
 stgIcon.addEventListener( "click", () => {
     styleSwich.classList.toggle( "active" );
@@ -31,7 +36,19 @@ const swich = ()=>{
 swich();
 
 
+nav_toggle.addEventListener( "click", () => {
+  
+    nav_toggle.classList.toggle( "active" );
+    header.classList.toggle( "active" );
+  })
+  
 
+allLink.forEach( ( link ) => {
+    link.addEventListener( "click", () => {
+        nav_toggle.classList.toggle( "active" );
+    header.classList.toggle( "active" );
+    })
+  })
 
 
 

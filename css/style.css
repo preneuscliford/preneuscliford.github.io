@@ -37,11 +37,7 @@ main.dark{
 
 
 
-body{
-    line-height: 1.5;
-    font-size: 1rem;
 
-}
        /* ======================================== header========================== */
 header{
     position: fixed;
@@ -941,15 +937,21 @@ canvas {
     
     }
 
+    .contact .container .row .personal-info {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
     .services .container .row .title p {
         font-size: 1rem;
-        font-weight: 400;
+      
         
     }
 
     .about .container .row .row-container .text p {
         font-size: 1rem;
-        font-weight: 400;
+        
     }
     .about .container .row .row-container .text h3 {
         font-size: 1.2rem;
@@ -982,7 +984,7 @@ main .home .container .row p:nth-child(2) span{
     color: var(--skins-color1);
 }
 main .home .container .row p:nth-child(3){
-    font-size: 1.1rem;
+    font-size: 1rem;
     
 }
 
@@ -1000,6 +1002,7 @@ main .home .container .row p:nth-child(3){
 .about .container .row .row-container .text p{
     color: var(--color4);
     max-width: 100%;
+    font-size: 1rem;
     
 }
 
@@ -1025,5 +1028,13 @@ main .home .container .row p:nth-child(3){
 .contact .container .row .personal-info .info{
     flex: 0 0 100%;
     max-width: 100%;
+    padding: 0;
 }
+
+.contact .container .row .sci p{
+    font-size: 1rem;
+}
+
+
+
 }
